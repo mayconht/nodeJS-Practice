@@ -1,6 +1,6 @@
 const service = require('./service')
 
-
+//How it works on background
 Array.prototype.meuMap = function (callback){
     const novoArrayMapeado = []
     for(let indice = 0; indice <= this.length -1; indice ++){

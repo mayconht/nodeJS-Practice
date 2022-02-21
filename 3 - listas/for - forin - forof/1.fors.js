@@ -26,7 +26,7 @@ async function main() {
 
         console.log(`names`, names)
     }
-    catch {
+    catch (error) {
         console.error('internal error', error)
     }
 }

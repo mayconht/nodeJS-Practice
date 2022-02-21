@@ -1,5 +1,5 @@
 const axios = require('axios')
-const URL = 'https://swapi.dev/api/people'
+const URL = 'https://swapi.py4e.com/api/people'
 
 //Fara a busca no site swapi que traz dados dos personagens do star wars
 
