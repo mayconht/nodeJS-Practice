@@ -94,9 +94,15 @@ console.log(add(1, 2));
 
 //Classes
 
-class Person {
-    private id: number;
-    private name: string;
+interface PersonInterface {
+    id: number,
+    name: string,
+    register(): string
+}
+
+class Person implements PersonInterface {
+    id: number;
+    name: string;
 
     constructor(id: number, name: string) {
         this.id = id;
@@ -107,24 +113,50 @@ class Person {
         return `${this.name} is now registered`;
     }
 
-    getId() {
-        return this.id;
-    }
-    getName() {
-        return this.name;
-    }
-    setId(id: number) { 
-        this.id = id;
-    }
-    setName(name: string) {
-        this.name = name;
-    }
+    // getId() {
+    //     return this.id;
+    // }
+    // getName() {
+    //     return this.name;
+    // }
+    // setId(id: number) { 
+    //     this.id = id;
+    // }
+    // setName(name: string) {
+    //     this.name = name;
+    // }
 
 }
 
 const maycon = new Person(1, 'Maycon');
 
-// maycon.name = 'Maycon Douglas';
-// console.log(maycon.name);
+maycon.name = 'Maycon Douglas';
+console.log(maycon.name);
 
-console.log(maycon.getName());
+// console.log(maycon.getName());
+
+class Employee extends Person {
+    position: string;
+
+    constructor(id: number, name: string, position: string) {
+        super(id, name);
+        this.position = position;
+    }
+}
+
+const empl = new Employee(3, 'Douglas', 'Developer');
+
+console.log(empl);
+
+//Generics
+
+function getArray<T>(items: T[]): T[] {
+    return new Array().concat(items);
+}
+
+let numArray = getArray<number>([1, 2, 3, 4]);
+let strArray = getArray<string>(['Maycon', 'Douglas']);
+strArray.push('Hello');
+numArray.push(5);
+
+console.log(numArray);
