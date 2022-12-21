@@ -46,3 +46,51 @@ const user: User = {
     id: 1,
     name: 'Maycon'
 }
+
+//Type Assertion
+
+let cid: any = 1;
+//let customerId = <number>cid;
+let customerId = cid as number;
+
+//Functions
+function addNum (x: number, y: number): number {
+    return x + y;
+}
+
+console.log(addNum(1, 2));
+
+function log (message: string | number): void {
+    console.log(message);
+}
+
+log('Hello World');
+log(350);
+
+//Interfaces
+interface UserInterface {
+    readonly id: number,
+    name: string,
+    age?: number
+}
+
+const user1: UserInterface = {
+    id: 1,
+    name: 'Maycon'
+}
+
+//user1.id = 2; //error
+
+interface MathFunc {
+    (x: number, y: number): number;
+}
+
+const add: MathFunc = (x: number, y: number): number => x + y;
+const sub: MathFunc = (x: number, y: number): number => x - y;
+const mul: MathFunc = (x: number, y: number): number => x * y;
+const div: MathFunc = (x: number, y: number): number => x / y;
+
+console.log(add(1, 2));
+
+//Classes
+
