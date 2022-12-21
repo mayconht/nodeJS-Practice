@@ -36,3 +36,13 @@ enum Direction2 {
     Right = 'Right'
 }
 
+//objects -- Interfaces
+type User = {
+    id: number,
+    name: string
+}
+
+const user: User = {   
+    id: 1,
+    name: 'Maycon'
+}
