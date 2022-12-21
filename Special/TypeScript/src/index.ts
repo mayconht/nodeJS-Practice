@@ -7,4 +7,5 @@ let x: any = 'Hello';
 let ids: number[] = [1, 2, 3, 4, 5];
 let arr: any[] = [1, true, 'Hello'];
 
-
+//tuple
+let person: [number, string, boolean] = [1, 'Maycon', true];
