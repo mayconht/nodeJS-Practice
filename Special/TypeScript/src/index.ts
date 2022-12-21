@@ -94,3 +94,37 @@ console.log(add(1, 2));
 
 //Classes
 
+class Person {
+    private id: number;
+    private name: string;
+
+    constructor(id: number, name: string) {
+        this.id = id;
+        this.name = name;
+    }
+
+    register() {
+        return `${this.name} is now registered`;
+    }
+
+    getId() {
+        return this.id;
+    }
+    getName() {
+        return this.name;
+    }
+    setId(id: number) { 
+        this.id = id;
+    }
+    setName(name: string) {
+        this.name = name;
+    }
+
+}
+
+const maycon = new Person(1, 'Maycon');
+
+// maycon.name = 'Maycon Douglas';
+// console.log(maycon.name);
+
+console.log(maycon.getName());
